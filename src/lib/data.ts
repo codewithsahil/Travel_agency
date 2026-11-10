@@ -551,7 +551,7 @@ export const team = [
   {
     name: "Rohan Kapoor",
     role: "Founder & Head of Journeys",
-    bio: "Started Onceagain after a missed ferry in Greece. Has visited 60+ countries, still gets lost.",
+    bio: "Started Once Again after a missed ferry in Greece. Has visited 60+ countries, still gets lost.",
     image: "1507003211169-0a1dd7228f2d",
   },
   {
@@ -578,7 +578,7 @@ export const timeline = [
   {
     year: "2011",
     title: "A missed ferry, a better idea",
-    text: "Rohan plans a friend's trip around Greece from a rented desk in Delhi and realises travel planning is mostly worry. The first Onceagain itinerary goes out that winter.",
+    text: "Rohan plans a friend's trip around Greece from a rented desk in Delhi and realises travel planning is mostly worry. The first Once Again itinerary goes out that winter.",
   },
   {
     year: "2014",

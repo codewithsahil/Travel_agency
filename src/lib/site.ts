@@ -4,10 +4,10 @@
  * All phone numbers / addresses below are placeholders.
  */
 export const siteConfig = {
-  name: "Onceagain",
+  name: "Once Again",
   tagline: "Trips you'll want to take once again",
   description:
-    "Onceagain plans holiday packages for couples, families and friends — hand-picked stays, honest prices and a real person on call 24/7.",
+    "Once Again plans holiday packages for couples, families and friends — hand-picked stays, honest prices and a real person on call 24/7.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://onceagain.example",
   currency: "₹",
   locale: "en-IN",

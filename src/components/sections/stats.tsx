@@ -10,7 +10,7 @@ const stats = [
 
 export function Stats() {
   return (
-    <section aria-label="Onceagain in numbers" className="bg-background">
+    <section aria-label="Once Again in numbers" className="bg-background">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
         <Reveal>
           <dl className="grid grid-cols-2 gap-y-10 md:grid-cols-4 md:gap-y-0 md:divide-x md:divide-border">

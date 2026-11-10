@@ -14,7 +14,7 @@ import { pageMetadata } from "@/lib/seo"
 
 const title = "About us"
 const description =
-  "Onceagain is a team of travelers who plan trips we'd take ourselves. Meet the people, the story since 2011 and the values behind every itinerary."
+  "Once Again is a team of travelers who plan trips we'd take ourselves. Meet the people, the story since 2011 and the values behind every itinerary."
 
 export const metadata: Metadata = pageMetadata({
   title,
@@ -57,7 +57,7 @@ export default function AboutPage() {
                 if he ever ran a travel company, someone would always pick up.
               </p>
               <p>
-                Onceagain is that promise, grown into a team of planners who&rsquo;ve walked the trails, slept in the
+                Once Again is that promise, grown into a team of planners who&rsquo;ve walked the trails, slept in the
                 hotels and know which table has the view. We keep our name for the best reason there is:
                 most of our travelers come back.
               </p>
