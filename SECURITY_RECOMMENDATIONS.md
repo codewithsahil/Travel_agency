@@ -1,6 +1,6 @@
 # Security Recommendations
 
-Companion to `SECURITY_AUDIT.md`. Priorities: **P1** before real customer data flows, **P2** before launch, **P3** ongoing.
+Companion to `SECURITY_AUDIT.md`. The step-by-step working list (open items, **login/auth requirements and how to test each**) is in [`SECURITY_TODO.md`](SECURITY_TODO.md). Priorities: **P1** before real customer data flows, **P2** before launch, **P3** ongoing.
 
 ## 1. Remaining risks
 

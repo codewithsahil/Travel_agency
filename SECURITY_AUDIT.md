@@ -7,6 +7,8 @@
 | **Method** | Read-only code review first, then scanning, black-box testing, fixes, re-testing |
 | **Out of scope (by request)** | Login, sessions, JWT, passwords, RBAC, IDOR. **There is no login in this app**, so those items are *not applicable*, not "passed". |
 
+> **Remaining work, login/auth requirements and how to test them are tracked in [`SECURITY_TODO.md`](SECURITY_TODO.md).**
+
 ## 1. Overall assessment
 
 The site is a **static marketing site with one write endpoint** (`POST /api/enquiry`). It has no database, no
