@@ -129,7 +129,7 @@ export default function ContactPage() {
               title={`Map showing the ${siteConfig.name} office`}
               src={mapSrc}
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
               className="h-[380px] w-full border-0 md:h-[480px]"
             />

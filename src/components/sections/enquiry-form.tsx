@@ -23,7 +23,9 @@ export function EnquiryForm() {
 
   const prefillDestination = params.get("destination") ?? ""
   const known = destinations.some((d) => d.name === prefillDestination)
-  const context = [params.get("package"), params.get("tier") && `${params.get("tier")} tier`, params.get("offer") && `Offer ${params.get("offer")}`]
+  // These come from the URL, so cap their length: a crafted link must not pre-fill a huge or abusive message.
+  const clip = (v: string | null) => (v ?? "").slice(0, 80)
+  const context = [clip(params.get("package")), params.get("tier") && `${clip(params.get("tier"))} tier`, params.get("offer") && `Offer ${clip(params.get("offer"))}`]
     .filter(Boolean)
     .join(" · ")
 
