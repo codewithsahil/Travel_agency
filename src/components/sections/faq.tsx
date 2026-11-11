@@ -5,7 +5,9 @@ import { Reveal } from "@/components/reveal"
 import { SectionHeading } from "@/components/section-heading"
 import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion"
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion"
+import { WhatsAppIcon } from "@/components/icons/social"
 import { faqs } from "@/lib/data"
+import { siteConfig } from "@/lib/site"
 
 export function Faq() {
   return (
@@ -43,6 +45,23 @@ export function Faq() {
               </AccordionItem>
             ))}
           </Accordion>
+
+          <div className="mt-8 flex flex-col gap-4 rounded-2xl bg-secondary p-6 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="font-display text-xl text-deep">Still not sure about something?</p>
+              <p className="mt-1 text-muted-foreground">A real person replies on WhatsApp, usually within minutes.</p>
+            </div>
+            <a
+              href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Hi ${siteConfig.name}, I have a question before booking.`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-[#128c4a] px-6 font-semibold text-white transition-colors hover:bg-[#0f7a40]"
+            >
+              <WhatsAppIcon width={20} height={20} />
+              Ask on WhatsApp
+              <span className="sr-only">(opens in a new tab)</span>
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>
