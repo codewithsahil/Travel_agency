@@ -26,6 +26,7 @@ export default function PackagesPage() {
     <>
       <PageHeader
         title="Holiday packages, priced honestly"
+        crumb="Packages"
         text="Flights, stays, meals and sightseeing are all in the price. See exactly what you get before you book."
         image={photos.packagesHeader}
         alt="Resort pool with palm trees and loungers at golden hour"

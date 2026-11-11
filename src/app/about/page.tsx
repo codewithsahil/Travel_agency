@@ -38,6 +38,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         title="We plan the trips we'd take ourselves"
+        crumb="About"
         text="Fifteen years, 10,000 travelers and one rule: if we wouldn't book it for our own family, it isn't on the site."
         image={photos.aboutHeader}
         alt="Travel flat lay with a map, camera and passport"

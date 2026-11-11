@@ -29,6 +29,7 @@ export default function ContactPage() {
     <>
       <PageHeader
         title="Tell us where you want to go"
+        crumb="Contact"
         text="Send an enquiry and a trip planner will reply within 2 hours with ideas and a price. No pressure, no obligation."
         image={photos.contactHeader}
         alt="Aeroplane wing above the clouds at sunrise"

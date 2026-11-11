@@ -24,6 +24,7 @@ export default function DestinationsPage() {
     <>
       <PageHeader
         title="Find the place you'll want to go back to"
+        crumb="Destinations"
         text="Beaches, mountains, cities and a little adventure. Filter by the kind of trip you're after."
         image={photos.destinationsHeader}
         alt="Green mountain valley at sunrise with mist in the distance"
