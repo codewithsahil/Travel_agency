@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { Figtree, Fraunces } from "next/font/google"
 
+import { BackToTop } from "@/components/layout/back-to-top"
 import { Footer } from "@/components/layout/footer"
 import { Navbar } from "@/components/layout/navbar"
 import { ScrollProgress } from "@/components/layout/scroll-progress"
@@ -110,6 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
           </main>
           <Footer />
+          <BackToTop />
           <WhatsAppButton />
         </Providers>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
