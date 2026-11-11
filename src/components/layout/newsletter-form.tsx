@@ -34,6 +34,10 @@ export function NewsletterForm({ className }: { className?: string }) {
           name="email"
           type="email"
           autoComplete="email"
+          inputMode="email"
+          autoCapitalize="none"
+          spellCheck={false}
+          maxLength={254}
           placeholder="you@example.com"
           aria-invalid={status === "error"}
           aria-describedby={`${id}-msg`}
