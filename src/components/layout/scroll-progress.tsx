@@ -30,7 +30,7 @@ export function ScrollProgress() {
   }, [])
 
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[3px]">
+    <div aria-hidden className="pointer-events-none fixed print:hidden inset-x-0 top-0 z-[60] h-[3px]">
       <div ref={bar} className="h-full origin-left scale-x-0 bg-sunset will-change-transform" />
     </div>
   )

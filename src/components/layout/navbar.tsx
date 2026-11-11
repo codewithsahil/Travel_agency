@@ -44,7 +44,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300",
+        "fixed print:hidden inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-300",
         solid
           ? "border-b border-border/70 bg-background/80 text-deep shadow-[0_8px_30px_-18px_rgba(8,47,73,.35)] backdrop-blur-xl"
           : "bg-transparent text-white"

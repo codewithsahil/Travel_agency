@@ -10,7 +10,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp (opens in a new tab)"
-      className="group fixed right-4 bottom-4 z-40 flex h-14 items-center rounded-full bg-[#128c4a] text-white shadow-[0_14px_30px_-10px_rgba(18,140,74,.8)] transition-all duration-300 hover:pr-5 focus-visible:pr-5 sm:right-6 sm:bottom-6"
+      className="group fixed print:hidden right-4 bottom-4 z-40 flex h-14 items-center rounded-full bg-[#128c4a] text-white shadow-[0_14px_30px_-10px_rgba(18,140,74,.8)] transition-all duration-300 hover:pr-5 focus-visible:pr-5 sm:right-6 sm:bottom-6"
     >
       <span className="relative grid size-14 place-items-center">
         <span
