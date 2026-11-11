@@ -32,6 +32,27 @@ function Price({ p, light }: { p: TravelPackage; light?: boolean }) {
   )
 }
 
+/** Whole-number percentage saved versus the old price, or null when there is no real discount. */
+function discountPct(p: TravelPackage) {
+  if (!p.oldPrice || p.oldPrice <= p.price) return null
+  return Math.round((1 - p.price / p.oldPrice) * 100)
+}
+
+function SaveBadge({ p, className }: { p: TravelPackage; className?: string }) {
+  const pct = discountPct(p)
+  if (!pct) return null
+  return (
+    <span
+      className={cn(
+        "rounded-full bg-palm px-3 py-1 text-xs font-semibold text-white shadow-sm",
+        className
+      )}
+    >
+      Save {pct}%
+    </span>
+  )
+}
+
 function Nights({ n, className }: { n: number; className?: string }) {
   return (
     <span
@@ -70,6 +91,7 @@ export function PackageCard({ pkg: p, sizes }: { pkg: TravelPackage; sizes: stri
             className="object-cover transition-transform duration-700 ease-out hover:scale-[1.05]"
           />
           <Nights n={p.nights} className="absolute bottom-3 left-3" />
+          <SaveBadge p={p} className="absolute top-3 right-3" />
           {p.tag && (
             <span className="absolute top-3 left-3 rounded-full bg-sunset px-3 py-1 text-xs font-semibold text-white">
               {p.tag}
@@ -138,6 +160,7 @@ export function PackageFeature({ pkg: p, sizes }: { pkg: TravelPackage; sizes: s
         <Nights n={p.nights} />
         {p.tag && <span className="rounded-full bg-sunset px-3 py-1 text-xs font-semibold">{p.tag}</span>}
       </div>
+      <SaveBadge p={p} className="absolute top-5 right-5" />
       <div className="p-6 sm:p-8">
         <p className="flex items-center gap-1.5 text-sm text-white/85">
           <MapPin className="size-4" aria-hidden />
