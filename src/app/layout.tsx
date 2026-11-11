@@ -3,6 +3,7 @@ import { Figtree, Fraunces } from "next/font/google"
 
 import { Footer } from "@/components/layout/footer"
 import { Navbar } from "@/components/layout/navbar"
+import { ScrollProgress } from "@/components/layout/scroll-progress"
 import { WhatsAppButton } from "@/components/layout/whatsapp-button"
 import { Providers } from "@/components/providers"
 import { unsplash, photos } from "@/lib/images"
@@ -103,6 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <Providers>
+          <ScrollProgress />
           <Navbar />
           <main id="main" className="flex-1">
             {children}
