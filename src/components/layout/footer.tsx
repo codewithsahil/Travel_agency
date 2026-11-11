@@ -4,6 +4,7 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react"
 import { FacebookIcon, InstagramIcon, XIcon, YoutubeIcon } from "@/components/icons/social"
 import { Logo } from "@/components/layout/logo"
 import { NewsletterForm } from "@/components/layout/newsletter-form"
+import { OfficeStatus } from "@/components/layout/office-status"
 import { destinations } from "@/lib/data"
 import { navLinks, siteConfig } from "@/lib/site"
 
@@ -85,7 +86,7 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Clock className="mt-0.5 size-5 shrink-0 text-lagoon" aria-hidden />
-                <span>Mon – Sat, 9:30 am – 7 pm</span>
+                <OfficeStatus />
               </li>
             </ul>
             <ul className="mt-6 flex gap-2">
