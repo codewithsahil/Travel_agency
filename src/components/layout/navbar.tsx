@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { useEffect, useState, useSyncExternalStore } from "react"
 import { Phone } from "lucide-react"
 
+import { WhatsAppIcon } from "@/components/icons/social"
 import { Logo } from "@/components/layout/logo"
 import { ThemeToggle } from "@/components/layout/theme-toggle"
 import { ShimmerButton } from "@/components/ui/shimmer-button"
@@ -181,6 +182,16 @@ export function Navbar() {
               >
                 <Phone className="size-4" aria-hidden />
                 Call {siteConfig.phone}
+              </a>
+              <a
+                href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Hi ${siteConfig.name}, I would like help planning a trip.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-11 items-center justify-center gap-2 text-sm font-medium text-[#0f7a40]"
+              >
+                <WhatsAppIcon width={16} height={16} />
+                Chat on WhatsApp
+                <span className="sr-only">(opens in a new tab)</span>
               </a>
             </div>
           </motion.div>
