@@ -1,7 +1,13 @@
 import { Compass } from "lucide-react"
+import type { Metadata } from "next"
 import Link from "next/link"
 
 import { destinations } from "@/lib/data"
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  robots: { index: false },
+}
 
 export default function NotFound() {
   return (
