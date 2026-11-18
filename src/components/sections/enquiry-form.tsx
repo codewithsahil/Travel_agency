@@ -139,7 +139,7 @@ export function EnquiryForm() {
               />
             </svg>
             <h2 ref={successRef} tabIndex={-1} className="mt-6 text-3xl font-medium text-deep outline-none">
-              Thank you, {values.name.split(" ")[0]}!
+              Thank you, {values.name.trim().split(/\s+/)[0]}!
             </h2>
             <p className="mt-3 max-w-md text-lg text-muted-foreground">
               Your enquiry is in. A trip planner will email {values.email} within 2 hours with ideas and a price.
