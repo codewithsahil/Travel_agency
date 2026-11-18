@@ -117,7 +117,7 @@ export function DestinationsExplorer() {
           {params.get("travelers") && (
             <span className="text-sm text-muted-foreground">
               · {params.get("travelers")} traveler{params.get("travelers") === "1" ? "" : "s"}
-              {params.get("depart") ? ` · from ${params.get("depart")}` : ""}
+              {params.get("depart") ? ` · from ${formatDate(params.get("depart")!)}` : ""}
             </span>
           )}
         </div>
@@ -173,6 +173,15 @@ export function DestinationsExplorer() {
       </section>
     </>
   )
+}
+
+/** "2026-12-01" → "1 Dec 2026". Read as UTC so the day never shifts with the viewer's time zone. */
+function formatDate(iso: string) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso)
+  if (!m) return iso
+  const date = new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3])))
+  if (Number.isNaN(date.getTime())) return iso
+  return new Intl.DateTimeFormat("en-IN", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }).format(date)
 }
 
 function matches(text: string, q: string) {
