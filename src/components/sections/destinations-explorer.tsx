@@ -106,10 +106,11 @@ export function DestinationsExplorer() {
             <button
               type="button"
               onClick={() => router.replace("/destinations", { scroll: false })}
+              aria-label={`Clear search for “${q}”`}
               className="inline-flex min-h-9 cursor-pointer items-center gap-2 rounded-full bg-secondary px-4 text-sm font-medium text-ocean hover:bg-secondary/70"
             >
               Search: &ldquo;{q}&rdquo;
-              <X className="size-4" aria-label="Clear search" />
+              <X className="size-4" aria-hidden />
             </button>
           )}
           {params.get("travelers") && (
