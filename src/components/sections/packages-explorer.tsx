@@ -28,7 +28,8 @@ export function PackagesExplorer() {
     const hash = window.location.hash.slice(1)
     if (!hash) return
     const t = window.setTimeout(() => {
-      document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "center" })
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      document.getElementById(hash)?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" })
     }, 350)
     return () => window.clearTimeout(t)
   }, [])
