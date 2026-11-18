@@ -35,9 +35,14 @@ export function Navbar() {
     document.body.style.overflow = "hidden"
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpenFor(null)
     window.addEventListener("keydown", onKey)
+    // The menu is hidden at the lg breakpoint, so close it there or the page stays scroll-locked.
+    const desktop = window.matchMedia("(min-width: 64rem)")
+    const onDesktop = (e: MediaQueryListEvent) => e.matches && setOpenFor(null)
+    desktop.addEventListener("change", onDesktop)
     return () => {
       document.body.style.overflow = prev
       window.removeEventListener("keydown", onKey)
+      desktop.removeEventListener("change", onDesktop)
     }
   }, [open])
 
