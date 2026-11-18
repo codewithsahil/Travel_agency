@@ -80,7 +80,7 @@ export function PackageCard({ pkg: p, sizes }: { pkg: TravelPackage; sizes: stri
     <div className="h-full [filter:drop-shadow(0_18px_28px_rgba(8,47,73,.14))]">
       <article
         id={p.slug}
-        className="ticket-notch-x flex h-full scroll-mt-28 flex-col overflow-hidden rounded-[24px] bg-card [--notch-y:calc(100%_-_92px)]"
+        className="group ticket-notch-x flex h-full scroll-mt-28 flex-col overflow-hidden rounded-[24px] bg-card [--notch-y:calc(100%_-_92px)]"
       >
         <div className="relative aspect-[16/10] overflow-hidden">
           <Photo
@@ -88,7 +88,7 @@ export function PackageCard({ pkg: p, sizes }: { pkg: TravelPackage; sizes: stri
             alt={p.alt}
             fill
             sizes={sizes}
-            className="object-cover transition-transform duration-700 ease-out hover:scale-[1.05]"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
           />
           <Nights n={p.nights} className="absolute bottom-3 left-3" />
           <SaveBadge p={p} className="absolute top-3 right-3" />
