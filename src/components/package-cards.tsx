@@ -177,6 +177,7 @@ export function PackageFeature({ pkg: p, sizes }: { pkg: TravelPackage; sizes: s
           <Price p={p} light />
           <Link
             href={detailsHref(p)}
+            aria-label={`View details of ${p.title}`}
             className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-white px-5 text-sm font-semibold text-navy transition-colors hover:bg-sky-100"
           >
             View Details
@@ -214,6 +215,7 @@ export function PackageCompact({ pkg: p, sizes }: { pkg: TravelPackage; sizes: s
           <Price p={p} />
           <Link
             href={detailsHref(p)}
+            aria-label={`View details of ${p.title}`}
             className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-deep/25 px-4 text-sm font-semibold text-deep transition-colors hover:border-deep hover:bg-deep hover:text-white"
           >
             View Details
