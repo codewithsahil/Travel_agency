@@ -107,6 +107,7 @@ export function DestinationCard({
           </p>
           <Link
             href={`/contact?destination=${encodeURIComponent(d.name)}${extraQuery ? `&${extraQuery}` : ""}`}
+            aria-label={`Enquire about ${d.name}`}
             className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-sunset px-5 text-sm font-semibold text-white transition-colors hover:bg-sunset-hover"
           >
             Enquire
