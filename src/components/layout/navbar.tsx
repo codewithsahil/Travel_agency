@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "motion/react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useEffect, useState, useSyncExternalStore } from "react"
+import { useEffect, useRef, useState, useSyncExternalStore } from "react"
 import { Phone } from "lucide-react"
 
 import { WhatsAppIcon } from "@/components/icons/social"
@@ -24,6 +24,7 @@ export function Navbar() {
   const pathname = usePathname()
   const scrolled = useSyncExternalStore(subscribeScroll, getScrolled, getScrolledServer)
   const [openFor, setOpenFor] = useState<string | null>(null)
+  const menuButton = useRef<HTMLButtonElement>(null)
   // The menu is "open" only for the route it was opened on, so navigating closes it.
   const open = openFor === pathname
   const knownRoute = navLinks.some((l) => l.href === pathname)
@@ -33,7 +34,11 @@ export function Navbar() {
     if (!open) return
     const prev = document.body.style.overflow
     document.body.style.overflow = "hidden"
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpenFor(null)
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return
+      setOpenFor(null)
+      menuButton.current?.focus()
+    }
     window.addEventListener("keydown", onKey)
     // The menu is hidden at the lg breakpoint, so close it there or the page stays scroll-locked.
     const desktop = window.matchMedia("(min-width: 64rem)")
@@ -111,6 +116,7 @@ export function Navbar() {
           </ShimmerButton>
 
           <button
+            ref={menuButton}
             type="button"
             onClick={() => setOpenFor(open ? null : pathname)}
             aria-expanded={open}
