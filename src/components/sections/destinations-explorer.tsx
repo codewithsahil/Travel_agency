@@ -1,6 +1,7 @@
 "use client"
 
 import { AnimatePresence, motion } from "motion/react"
+import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 import { useMemo, useState } from "react"
 import { Compass, X } from "lucide-react"
@@ -160,12 +161,12 @@ export function DestinationsExplorer() {
               >
                 Clear filters
               </button>
-              <a
+              <Link
                 href={`/contact${q ? `?destination=${encodeURIComponent(q)}` : ""}`}
                 className="inline-flex min-h-11 items-center rounded-full bg-sunset px-5 text-sm font-semibold text-white hover:bg-sunset-hover"
               >
                 Ask for {q ? `"${q}"` : "a custom trip"}
-              </a>
+              </Link>
             </div>
           </div>
         )}
